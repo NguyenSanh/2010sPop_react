@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Front-End React Project #1: Revival of the Early 2010s Pop Scene
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
