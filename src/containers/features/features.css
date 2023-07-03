@@ -1,0 +1,63 @@
+/* Styling for the main parent div container */
+.gpt3__features {
+  width: 100%;
+  display: flex; /* Displays everything in a row from left to right */
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+/* Styling for the child div container holding the section heading */
+.gpt3__features-heading {
+  flex: 1; /* Make the gradient header the same width as everything else in the flexbox*/
+  display: flex; /* Make the header div its own flexbox container*/
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column; /* Heading and paragraph text appear as a column within the flexbox container */
+
+  text-align: left;
+  margin-right: 5rem;
+}
+
+.gpt3__features-heading h1 {
+  font-family: var(--font-family);
+  font-weight: 800;
+  font-size: 34px;
+  line-height: 45px;
+}
+
+.gpt3__features-heading p {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  color: #ff8a71; /* Set paragraph color text*/
+  margin-top: 2rem; /* Add spacing between the paragraph text and the heading above it in the column flexbox */
+}
+
+/* This container holds all the Feature components */
+.gpt3__features-container {
+    flex: 1.5;
+    display: flex; /* Create a flexbox for the feature components */
+    justify-content: flex-start; /* Items are pushed towards the start of the flex direction (set as column later) */
+    align-items: center;
+    flex-direction: column; /* Have the feature components appear as column in the flexbox */
+}
+
+/* Add Media Queries*/
+@media screen and (max-width: 990px) {
+    .gpt3__features {
+        flex-direction: column; /* Puts the heading and features components in a column for better readability on smaller devices */
+    }
+
+    .gpt3__features-heading {
+        margin: 0 0 2rem 0; /* Add 2rem spacing underneath the heading */
+    }
+}
+
+
+@media screen and (max-width: 550px) {
+    .gpt3__features-heading h1{  
+        font-size: 28px;
+        line-height: 38px;
+    }
+}

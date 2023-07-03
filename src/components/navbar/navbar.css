@@ -1,0 +1,149 @@
+/* Styling for the parent Navbar div */
+.gpt3__navbar {
+  display: flex; /*Creates a flex container and defaults direct children of container to become flex items in a row*/
+  justify-content: space-between; /* Items evenly distributed along main axis in flex container */
+  align-items: center; /*Alters the size of items to be directly in the cneter in the flex container*/
+
+  padding: 2rem 6rem; /*2rem padding top & bottom, 6rem padding left & right */
+}
+
+/* Styling for the Navbar links within the parent Navbar div */
+.gpt3__navbar-links {
+  flex: 1; /* Signifies width of all other elements will be the same, but element with flex: 1 is given the remaining full space*/
+  display: flex;
+  justify-content: flex-start; /*Items in flex container are pushed towards the start of the flex flow*/
+  align-items: center;
+}
+
+/* Styling for Navbar's logo div */
+.gpt3__navbar-links_logo {
+  margin-right: 2rem; /* Margin is used to create space between different elements*/
+}
+
+/* Styling for Navbar's GPT-3 logo image*/
+.gpt3__navbar-links_logo img {
+  width: 62.56px;
+  height: 16.02px;
+}
+
+/* Styling for the div containing all the anchor tags (links)*/
+.gpt3__navbar-links_container {
+  display: flex; /* Creates a flexbox (container) for children within this element*/
+  flex-direction: row; /*Items within the flex container are listed in a row*/
+}
+
+/* Sign-In Button */
+.gpt3__navbar-sign {
+  display: flex; /* Creates a flexbox */
+  justify-content: flex-end; /*Items in flexbox are pushed towards the end of flex direction flow*/
+  align-items: center;
+}
+
+/* Target only the <p> elements within these 3 containers */
+.gpt3__navbar-links_container p,
+.gpt3__navbar-sign p,
+.gpt3__navbar-menu_container p {
+  color: #fff; /* Sets the <p> elements to white */
+  font-family: var(--font-family);
+  font-weight: 500; /* Controls how bold the text looks */
+  font-size: 18px; /* Controls the size of the text */
+  line-height: 25px; /* Controls how far text are apart from each other vertically */
+  text-transform: capitalize; /* Only capitalize the first letter of each word */
+
+  margin: 0 1rem; /* Sets 1rem space between each link <p> in the Navbar*/
+  cursor: pointer; /* Cursor turns into finger pointer when mouse hovers over link*/
+}
+
+/* Styling for 'Sign In' Button & Container Button*/
+.gpt3__navbar-sign button,
+.gpt3__navbar-menu_container button {
+  padding: 0.5rem 1rem; /* Padding is used to create space within the Sign In Button */
+  color: #fff; /* Set sign in button text color to white */
+  background: #ff4820; /* Sets background color for the button*/
+  font-family: var(--font-family); /* Sets font */
+  font-weight: 500; /* Sets boldness of text */
+  font-size: 18px; /* Sets size of text  */
+  line-height: 25px; /* Sets vertical distance of text  */
+
+  border: 0; /* Removes any visible border outline from the 'Sign-In' button */
+  border-radius: 5px;
+  outline: 0; /* Removes any sort of outlne design from 'Sign-In' button*/
+  cursor: pointer; /* When cursor hovers over button, it turns into pointer */
+}
+
+/* Style for the box menu icon */
+.gpt3__navbar-menu {
+  margin-left: 1rem;
+  display: none; /* Removes the element from the document, does not take up any space.*/
+  position: relative;
+}
+
+.gpt3__navbar-menu svg {
+  cursor: pointer;
+}
+
+/* Styling for the mobile menu */
+.gpt3__navbar-menu_container {
+  display: flex;
+  justify-content: flex-end; /* Aligns items to the end of the flex flow on the main axis*/
+  align-items: flex-end; /* Aligns items to the end of the flex flow on the cross axis*/
+  flex-direction: column;
+
+  text-align: end; /**/
+  background: var(--color-footer);
+  padding: 2rem;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  margin-top: 1rem;
+  min-width: 210px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.gpt3__navbar-menu_container p {
+  margin: 1rem 0;
+}
+
+.gpt3__navbar-menu_container-links-sign {
+  display: none;
+}
+
+/* Set media screen for phones and tablets for mobile menu to appear*/
+@media screen and (max-width: 1050px) {
+  .gpt3__navbar-links_container {
+    display: none; /* Hides web browser container of links */
+  }
+
+  .gpt3__navbar-menu {
+    display: flex; /* Shows the navbar menu on the side */
+  }
+}
+
+/* Set media screen for devices of max width 700px */
+@media screen and (max-width: 700px) {
+  .gpt3__navbar {
+    padding: 2rem 4rem;
+  }
+}
+
+/* Set media screen for devices of max width 550px */
+@media screen and (max-width: 550px) {
+  .gpt3__navbar {
+    padding: 2rem;
+  }
+
+  /* Get rid of the 'Sign Up' text and 'Sign In' button on smaller devices*/
+  .gpt3__navbar-sign {
+    display: none;
+  }
+
+  .gpt3__navbar-menu_container {
+    top: 20px;
+  }
+
+  /* Makes the 'Sign Up' text and Sign In button appear on the mobile menu*/
+  .gpt3__navbar-menu_container-links-sign {
+    display: block;
+  }
+}

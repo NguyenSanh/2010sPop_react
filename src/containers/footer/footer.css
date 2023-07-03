@@ -1,0 +1,165 @@
+/* Styling for the entire footer div itself*/
+.gpt3__footer {
+  display: flex; /* All items in parenting div are in a flex direction*/
+
+  flex-direction: column;
+  justify-content: center; /* In this case, items are center vertically */
+  align-items: center; /* In this case, items are centered on horizontal axis  */
+
+  background: var(
+    --color-footer
+  ); /* Set the background color for the entire footer*/
+}
+
+/* Div containing header */
+.gpt3__footer-heading {
+  width: 100%;
+  text-align: center; /* center heading text */
+  margin-bottom: 3rem;
+}
+
+/* Header h1 element */
+.gpt3__footer-heading h1 {
+  font-family: var(--font-family);
+  font-weight: 800;
+  font-size: 62px;
+  line-height: 75px;
+  text-align: center;
+  letter-spacing: -0.04em;
+}
+
+/* Styling for the Div container for button */
+.gpt3__footer-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #fff;
+  text-align: center;
+  margin-bottom: 10rem; /* Add space betrween the button and the links below it*/
+  cursor: pointer;
+}
+
+/* Style the p text within the button div container */
+.gpt3__footer-btn p {
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  font-size: 18px;
+  line-height: 21px;
+  color: #fff;
+  word-spacing: 2px; /* Add spacing between whole words */
+}
+
+/* Styling for the div containing all the links*/
+.gpt3__footer-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  width: 100%;
+  text-align: left;
+}
+
+.gpt3__footer-links div {
+  width: 250px;
+  margin: 1rem;
+}
+
+/* Target the div with the logo */
+.gpt3__footer-links_logo {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Target Image in logo div */
+.gpt3__footer-links_logo img {
+  width: 118px;
+  height: 30px;
+  margin-bottom: 1rem;
+}
+
+/* Target p text in logo div */
+.gpt3__footer-links_logo p {
+  font-family: var(--font-family);
+  font-size: 12px;
+  line-height: 14px;
+  color: #fff;
+}
+
+/* Target the child divs within the footer div */
+.gpt3__footer-links_div {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+/* Target all the h4 items within the divs*/
+.gpt3__footer-links_div h4 {
+  font-family: var(--font-family);
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+
+  margin-bottom: 1rem;
+}
+
+/* Target all the p items within the divs*/
+.gpt3__footer-links_div p {
+  font-family: var(--font-family);
+  font-size: 12px;
+  line-height: 14px;
+  color: #fff;
+
+  margin: 0.5rem 0; /* All the p elements in the div have 0.5rem spacing above & below them*/
+  cursor: pointer;
+}
+
+/* Target the copyright footer div at the very bottom */
+.gpt3__footer-copyright {
+  margin-top: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* Target the copyright text itself */
+.gpt3__footer-copyright p {
+  font-family: var(--font-family);
+  font-size: 12px;
+  line-height: 14px;
+  color: #fff;
+}
+
+/* Media Query for devices lower than 850px*/
+@media screen and (max-width: 850px) {
+  .gpt3__footer-heading h1 {
+    font-size: 44px;
+    line-height: 50px;
+  }
+}
+
+/* Media Query for devices lower than 550px*/
+@media screen and (max-width: 550px) {
+  .gpt3__footer-heading h1 {
+    font-size: 34px;
+    line-height: 42px;
+  }
+
+  .gpt3__footer-links_div {
+    margin: 1rem 0;
+  }
+
+  /* Make the button text smaller */
+  .gpt3__footer-btn p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .gpt3__footer-heading h1 {
+    font-size: 27px;
+    line-height: 38px;
+  }
+}

@@ -1,0 +1,72 @@
+.gpt3__features-container__feature {
+    width: 100%;
+    display: flex; /** Creates a flexbox*/
+    justify-content: space-between;
+    align-items: flex-start; /* Items are placed at the top vertically */
+    flex-direction: row;
+
+    margin: 1rem;
+}
+
+/* Styling for div wrapper for feature title */
+.gpt3__features-container__feature-title {
+    flex: 1;
+    max-width: 180px;
+    margin-right: 2rem;  /* Controls spacing between feature titles */
+}
+
+/* Styling for the h1 header titles for each feature component*/
+.gpt3__features-container__feature-title h1 {
+    font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;
+
+    letter-spacing: -0.04em;
+    color: #fff;
+}
+
+/* Styling for the line above each feature title */
+.gpt3__features-container__feature-title div {
+    width: 50px;  /* Set the width of the line */
+    height: 5px; /* Height of the line */
+    background: var(--gradient-bar);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); /* Box shadow for line*/
+    margin-bottom: 0.25rem;
+}
+
+/* Styling for the div wrapper for text under each feature title */
+.gpt3__features-container_feature-text {
+    flex: 2; /* Gets twice as much space than the title because title is flex: 1*/
+    max-width: 300px;
+    display: flex;
+}
+
+/* Styling text p element directly */
+.gpt3__features-container_feature-text p {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--color-text);
+}
+
+/* Add Media Queries for screen with max width of 550px */
+@media screen and (max-width: 550px) {
+    /* Make the feature title a bit smaller on mobile devices */
+    .gpt3__features-container__feature-title h1 {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    /* Make the feature text a smaller as well */
+    .gpt3__features-container__feature-title p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    /* Parent container for the entire Feature component */
+    .gpt3__features-container__feature {
+        margin: 1rem 0;
+    }
+}

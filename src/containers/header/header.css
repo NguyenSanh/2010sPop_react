@@ -1,0 +1,188 @@
+/* Styling for the parent div wrapper for the entire Header*/
+.gpt3__header {
+    display: flex; /* Creates a flexbox*/
+}
+
+.gpt3__header-content {
+    flex: 1;
+    display: flex; 
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    margin-right: 5rem;
+}
+
+/* Style the <h1> element in the header content*/
+.gpt3__header-content h1 {
+    font-family: var(--font-family);
+    font-weight: 800;  /* Sets text boldness*/
+    font-size: 62px; /* Sets text size */
+    line-height: 75px;
+    letter-spacing: -0.04em; /* Decreases the spacing between letters in header*/
+}
+
+/* Style the <p> elements in Header Content*/
+.gpt3__header-content p {
+    font-family: var(--font-family);
+    font-size: normal;
+    font-weight: normal;
+    font-style: normal; /* Displays normal font style (not Italics or Obliqyue font style) */
+    line-height: 27px; /* Sets distance apart for lines of text vertically */
+    color: var(--color-text);
+
+    margin-top: 1.5rem; /* Adds spacing between two elements: the <p> text and the <h1> header*/
+}
+
+/* Styling for Email Input and Button Div Container in Header Content*/
+.gpt3__header-content__input {
+    width: 100%; /* width 100% makes element as wide as parent container */
+    margin: 2rem 0 1rem; /* Adds margin to top, left & right, and bottom in that order*/
+    display: flex;
+}
+
+/* Styling for the <input /> element inside the Input/Button Div Container*/
+.gpt3__header-content__input input {
+    background: var(--color-footer); /* Sets background color for email input box */
+    border-radius: 5px 0px 0px 5px; /* Specifies border radius for top left, top right, bottom right, and bottom left corners in that order.*/
+    font-family: var(--font-family); /* Set font for email input box text */
+    font-size: 20px; /* Increase email input box text size */
+    line-height: 27px; /* Set line height for text in email input box*/
+
+    border: 2px solid var(--color-footer); /* Adds a solid-lined border of 2px around the email input box*/
+    padding: 0 1rem; /* Add 1rem spacing on the left & right sides of the text */
+    outline: none; 
+    color: #fff;
+
+    flex: 2; /* Gives the input box more width relative to everything else in the div container*/
+    width: 100%; 
+    min-height: 50px; /* If content is smaller than min height, then min height will be applied*/
+
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* Styling for the button inside the Input & Button Div Container*/
+.gpt3__header-content__input button {
+    flex: 0.6; /* Button takes more space in the total width of div container */
+    width: 100%;
+    min-height: 50px; /* Button height is never less than 50px tall*/
+    font-family: var(--font-family); /* Set text font in button */
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 27px;
+    background: #FF4820; /* Set button's background color */
+    color: #fff;  /* Set the button's text color to white */
+
+    cursor: pointer; /* Set cursor to pointer when you hover over the button */
+    outline: 0; /* An outline encompasses the outside of the element, while a border stays on the edge of the element. */
+    border: 0; /* Same as border: none. Removes any border line around button */
+    padding: 0rem 1rem; /* Adds extra spacing between the letters and the button's internal borders. */
+
+    /* Make button's top & bottom right corners rounded 5px*/
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* People Images Section */
+.gpt3__header-content__people {
+    width: 100%;
+    display: flex; /* Creates a flexbox row, so makes the people image and text appear side by side in the duv container*/
+    justify-content: flex-start;
+    align-items: center; /* Align items by center makes the image have normal height */
+
+    margin-top: 2rem; /* Adds 2rem spacing between the people image and whatever content lies above it. */
+}
+
+/* Style the people image separately */ 
+.gpt3__header-content__people img {
+    width: 181.79px; /* Width of the people image*/
+    height: 38px; /* Height of the people image*/
+    
+}
+
+/* Style the text besdies image separately */ 
+.gpt3__header-content__people p {
+    margin: 0 0 0 1rem; /* Add margin spacing to top, right, bottom, left in that order */
+
+    font-family: var(--font-family);  /*Set text font to preset variable font */
+    font-weight: 500; /* Set text boldness*/
+    font-size: 12px; /* Set text size to be a little smaller */
+    line-height: 38px;
+
+    color: #FFF; /* Set text color to white */
+    text-align: center; /* Aligns text to be centered horizontally (like Google Docs)*/
+}
+
+/* AI Image div wrapper/container */
+.gpt3__header-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the AI image itself */
+.gpt3__header-image img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Media Queries for all Devices */
+@media screen and (max-width: 1050px) {
+    /* When screen is too small, need to reposition header content to column format*/
+    .gpt3__header {
+        flex-direction: column;
+    }
+
+    .gpt3__header-content {
+        margin: 0 0 3rem; /* Margin for top, bottom, left & right*/
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .gpt3__header h1 {
+        font-size: 48px;
+        line-height: 60px;
+    }
+
+    .gpt3__header p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .gpt3__header-content__people {
+        flex-direction: column;
+    }
+    
+    .gpt3__header-content__people p {
+        margin: 0; /* Center the text when in column mode, because the text & image are no longer side by side*/
+    }
+
+    /* Change the text size and line height for input & button as well */
+    .gpt3__header-content__input input, 
+    .gpt3__header-content__input button {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+/* Media query styling for the smallest of devices */
+@media screen and (max-width: 490px) {
+    .gpt3__header h1 {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .gpt3__header p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    /* Change the text size and line height for input & button as well */
+    .gpt3__header-content__input input, 
+    .gpt3__header-content__input button {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}

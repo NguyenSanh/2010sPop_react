@@ -1,0 +1,67 @@
+/* Styling for individual Article Components themselves */
+.gpt3__blog-container_article {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    background: var(--color-footer); /* Sets the background color for the entire div section */
+}
+
+/* Styling for the child div containing the Article's image*/
+.gpt3__blog-container_article-image {
+    width: 100%;
+    height: 100%;
+    background: var(--color-footer);
+}
+
+/* Styling for the Article image itself */
+.gpt3__blog-container_article-image img {
+    /*Image fills width/height of it's parent div, & won't render larger than it's actual size, thus preserving resolution*/
+    width: 100%; 
+    height: 100%;
+}
+
+/* Styling for the text content */
+.gpt3__blog-container_article-content {
+    display: flex;
+    flex-direction: column; /* Text content will appear on top of one another*/
+    justify-content: space-between;
+    padding: 1rem 1.5rem; /* 1rem on top and botton and 1.5 on left and right*/
+    height: 100%;
+}
+
+/* First (top) p element (Date Information) */
+.gpt3__blog-container_article-content p {
+    font-family: var(--font-family);
+    font-weight: bold;
+    font-size: 11.649px;
+    line-height: 35px;
+    color: #FFF;
+}
+
+/* Styling for the h3 element in text content (Title Infomation)*/
+.gpt3__blog-container_article-content h3 {
+    font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 25.11px;
+    line-height: 30px;
+    color: #FFF;
+
+    margin-bottom: 5rem; /* Separate the h3 and the bottom p text with some spacing in between */
+    cursor: pointer;
+}
+
+/* Last (bottom) p element */
+.gpt3__blog-container_article-content p:last-child {
+    cursor: pointer;
+}
+
+/* Media Queries */
+@media screen and (max-width: 550px) {
+    .gpt3__blog-container_article-content h3 {
+        font-size: 18px;
+        line-height: 25px;  /* Make text smaller on mobile devices */
+    }
+}
+
